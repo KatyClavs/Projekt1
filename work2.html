@@ -1,0 +1,84 @@
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменение по событию</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class ="logo"><a href="index.html"> <img class="image" src="logo.png"></a> </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#section1">Процесс обучения</a></li>
+                <li><a href="index.html#section2">Тарифные планы</a></li>
+                <li><a href="index.html#section3">Поездки</a></li>
+                <li><a href="https://vk.com/huamingyuan" target="_blank">HSK</a></li><br>
+                <li><a href="saport.html" >Поддержка</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="work.html">Паспорт</a></li>
+                <li id="a5"><a href="work2.html"><b>Изменение по событию</b></a></li>
+                <li><a href="task.html">Первая задача</a></li>
+                <li><a href="task2.html">Вторая задача</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <br>
+
+    <p>ПАСПОРТ ВЫДАН: УМВД ПО Г. ЕКАТЕРИНБУРГ</p>
+    <p>ДАТА ВЫДАЧИ: 27.03.2020</p>
+    <p>СЕРИЯ: 8742</p>
+    <p>НОМЕР: 123-456</p>
+    <p>ФАМИЛИЯ: <span>КОГТИНА</span></p>
+    <p>ИМЯ: <span>ЕКАТЕРИНА</span></p>
+    <p>ОТЧЕСТВО: <span>ДМИТРИЕВНА</span></p>
+    <p>ПОЛ: ЖЕН</p>
+    <p>ДАТА РОЖДЕНИЯ: <span>26.03.2005</span></p>
+    <p>МЕСТО РОЖДЕНИЯ: Г. ЕКАТЕРИНБУРГ</p>
+
+    <br>
+
+
+</main>
+<footer>
+        <p>&copy; 2024 ChaPanda.All rights reserved.</p>
+</footer>
+</body>
+
+<script>
+    const second_name = document.getElementsByTagName('span')[0]
+
+    function change_sn(){
+        let new_second_name = "KOGTINA"
+        let second_name_node = document.getElementsByTagName('span')[0].innerText = new_second_name
+        console.log(second_name_node)
+    }
+
+    second_name.addEventListener('click', change_sn)
+
+    const first_name = document.getElementsByTagName('span')[1]
+
+    function change_fn(){
+        let new_first_name = "EKATERINA"
+    let first_name_node = document.getElementsByTagName('span')[1].innerText = new_first_name
+
+    }
+
+    first_name.addEventListener('click', change_fn)
+
+    const dad_name = document.getElementsByTagName('span')[2]
+
+    function change_dn(){
+        let new_dad_name = "DMITREVNA"
+        let dad_name_node = document.getElementsByTagName('span')[2].innerText = new_dad_name
+    }
+
+    dad_name.addEventListener('click', change_dn)
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вторая задача</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class ="logo"><a href="index.html"> <img class="image" src="logo.png"></a> </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#section1">Процесс обучения</a></li>
+                <li><a href="index.html#section2">Тарифные планы</a></li>
+                <li><a href="index.html#section3">Поездки</a></li>
+                <li><a href="https://vk.com/huamingyuan" target="_blank">HSK</a></li><br>
+                <li><a href="saport.html" ><b>Поддержка</b></a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="work.html">Паспорт</a></li>
+                <li><a href="work2.html">Изменение по событию</a></li>
+                <li><a href="task.html">Первая задача</a></li>
+                <li id="a7"><a href="task2.html">Вторая задача</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+            <li>Для поисковика:<input name="q" value="search"></li>
+            <li>Формулировка задачи:<br> <textarea id="review" name="review" rows="4" required>Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном случае x = a − sin(a**2).</textarea></li>
+            <li>Число A: <input id="A" name="var" type="number" step="any" value="100"></li>
+            <li>Результат решения: <input name="result" id="result" type="text" value="---"></li>
+            <li>Проверка: <input id="verify" type="button" value="Нажмите"></li>
+            <li>Отправить: <input id="send" type="button" value="Нажмите"></li>
+        </ul>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</main>
+<footer>
+        <p>&copy; 2024 ChaPanda.All rights reserved.</p>
+</footer>
+    <script>
+        let result = "не определено";
+        let check = false;
+
+        function verify() {
+            const A = parseFloat(document.getElementById("A").value);
+            let error = "";
+
+            if (isNaN(A)) {
+                error = "Ошибка ввода данных";
+                result = error;
+                check = false;
+            } else if (A < 10) {
+                result = Math.pow(A, 4);
+                check = true;
+            } else if (A > 61) {
+                result = A;
+                check = true;
+            } else {
+                result = A - Math.sin(Math.pow(A, 2));
+                check = true;
+            }
+
+            console.log("Ответ: ", result);
+            document.getElementById("result").value = result.toFixed(2);;
+        }
+
+        function send() {
+            if (check) {
+                document.getElementsByName('result')[0].value = result.toFixed(2);;
+                document.getElementById("UserEnter").submit();
+            } else {
+                alert("Ошибка ввода данных");
+            }
+        }
+
+        const elementVerify = document.getElementById("verify");
+        elementVerify.addEventListener('click', verify);
+
+        const elementSend = document.getElementById("send");
+        elementSend.addEventListener('click', send);
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая задача</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class ="logo"><a href="index.html"> <img class="image" src="logo.png"></a> </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html#section1">Процесс обучения</a></li>
+                <li><a href="index.html#section2">Тарифные планы</a></li>
+                <li><a href="index.html#section3">Поездки</a></li>
+                <li><a href="https://vk.com/huamingyuan" target="_blank">HSK</a></li><br>
+                <li><a href="saport.html" ><b>Поддержка</b></a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="work.html">Паспорт</a></li>
+                <li><a href="work2.html">Изменение по событию</a></li>
+                <li id="a6"><a href="task.html">Первая задача</a></li>
+                <li><a href="task2.html">Вторая задача</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <br>
+    <p>Формулировка задачи: Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном случае x = a − sin(a**2).</p><br>
+    <p>Число: <span id="A">6.12</span></p>
+    <p id="K">Для получения результата нажмите сюда🐼</p>
+    <p>Результат: <span id="result"></span></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</main>
+
+<footer>
+    <p>&copy; 2024 ChaPanda. All rights reserved.</p>
+</footer>
+
+<script>
+    const node_for_click = document.getElementById('K');
+
+    function count_x() {
+
+        let A = parseFloat(document.getElementById('A').innerText);
+        let result;
+
+        if (A < 10) {
+            result = A ** 4;
+        } else if (A > 61) {
+            result = A;
+        } else {
+            result = A - Math.sin(A ** 2);
+        }
+
+        document.getElementById('result').innerText = result.toFixed(2);
+    }
+
+    node_for_click.addEventListener('click', count_x);
+</script>
+</body>
+</html>

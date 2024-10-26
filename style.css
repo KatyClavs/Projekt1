@@ -1,0 +1,109 @@
+
+body {
+    font-family: Comic Sans MS, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+
+}
+ main{
+    background: linear-gradient(to top, #DC143C, #CD5C5C, white);
+}
+
+#a1{
+        background-color: #FF2400
+    }
+
+#a2{
+        background-color: #FF0000
+    }
+
+#a3{
+        background-color: #F80000
+    }
+
+#a4{
+        background-color: #e61919
+    }
+
+#a5{
+        background-color: #cd0000
+    }
+
+
+#a6{
+        background-color: #b22222
+
+    }
+
+#a7{
+        background-color: #b81414
+    }
+
+
+.logo{
+    margin-top: -15px;
+}
+
+header {
+    background-image:url(../header0.jpg);
+    background-size: 100% auto;
+    color: white;
+
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    text-indent: 0px;
+    font-size: 27px;
+    margin-top: -79px;
+    margin-left:-90px ;
+}
+
+nav ul li {
+    margin-top:0px;
+    margin-right: 28px;
+    margin-left: 80px;
+    margin-bottom: 8px;
+    display:inline;
+    width: 1440px;
+    height: auto;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color:#CD5C5C;
+}
+
+h1, h2 {
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #DC143C;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+img {
+    cursor: pointer;
+}
