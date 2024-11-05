@@ -32,7 +32,8 @@
     <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
         <ul>
             <li>Для поисковика:<input name="q" value="search"></li>
-            <li>Формулировка задачи:<br> <textarea id="review" name="review" rows="4" required>Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном случае x = a − sin(a**2).</textarea></li>
+            <li>Формулировка задачи:<br> <textarea id="review" name="review" rows="4" required>Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном случае x = a − sin(a**2).</textarea></li> <!--textarea -  
+          используется для создания многострочного ввода-->
             <li>Число A: <input id="A" name="var" type="number" step="any" value="100"></li>
             <li>Результат решения: <input name="result" id="result" type="text" value="---"></li>
             <li>Проверка: <input id="verify" type="button" value="Нажмите"></li>
@@ -62,11 +63,11 @@
             let error = "";
 
             if (isNaN(A)) {
-                error = "Ошибка ввода данных";
+                error = "Ошибка ввода данных"; //если не число - ошибка
                 result = error;
                 check = false;
             } else if (A < 10) {
-                result = Math.pow(A, 4);
+                result = A ** 4;
                 check = true;
             } else if (A > 61) {
                 result = A;
@@ -76,7 +77,6 @@
                 check = true;
             }
 
-            console.log("Ответ: ", result);
             document.getElementById("result").value = result.toFixed(2);;
         }
 
