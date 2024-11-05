@@ -51,11 +51,11 @@
 </footer>
 
 <script>
-    const node_for_click = document.getElementById('K');
+    const node_for_click = document.getElementById('K'); // константа для вывода результата
 
     function count_x() {
 
-        let A = parseFloat(document.getElementById('A').innerText);
+        let A = parseFloat(document.getElementById('A').innerText); //А = числу из строки с id A (parseFloat для перевода из строки в числовое значение)
         let result;
 
         if (A < 10) {
@@ -63,13 +63,13 @@
         } else if (A > 61) {
             result = A;
         } else {
-            result = A - Math.sin(A ** 2);
+            result = A - Math.sin(A ** 2); //Math = библиотека математических функций (нужно для поиска синуса)
         }
 
-        document.getElementById('result').innerText = result.toFixed(2);
+        document.getElementById('result').innerText = result.toFixed(2); // toFixed(2) ответ сокращается до двух знаков после запятой 
     }
 
-    node_for_click.addEventListener('click', count_x);
+    node_for_click.addEventListener('click', count_x); // тригер действие = запись по клику
 </script>
 </body>
 </html>
