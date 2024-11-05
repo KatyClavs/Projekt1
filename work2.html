@@ -51,12 +51,11 @@
 </body>
 
 <script>
-    const second_name = document.getElementsByTagName('span')[0] //Объявляется  константа  second_name,  которая  получает  ссылки  на  первый  элемент  <span>  в  HTML-документе (фамилия).
+    const second_name = document.getElementsByTagName('span')[0] // second_name="КОГТИНА" это значение получено из первого элемента содержащего <span>  в  HTML-документе (фамилия).
 
     function change_sn(){
-        let new_second_name = "KOGTINA"
-        let second_name_node = document.getElementsByTagName('span')[0].innerText = new_second_name
-        console.log(second_name_node)
+        let new_second_name = "KOGTINA" // новое значение для фамилии 
+        let second_name_node = document.getElementsByTagName('span')[0].innerText = new_second_name // приравниваю (ЗАМЕНЯЮ) константное значение  на новое значение фамилии
     } //меняет  текст  ФАМИЛИИ  в  элементе 
 
     second_name.addEventListener('click', change_sn)
