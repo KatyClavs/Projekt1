@@ -76,13 +76,12 @@
                 result = A - Math.sin(Math.pow(A, 2));
                 check = true;
             }
-
             document.getElementById("result").value = result.toFixed(2);;
         }
 
         function send() {
             if (check) {
-                document.getElementsByName('result')[0].value = result.toFixed(2);;
+                document.getElementsById("result").value = result.toFixed(2);;
                 document.getElementById("UserEnter").submit();
             } else {
                 alert("Ошибка ввода данных");
