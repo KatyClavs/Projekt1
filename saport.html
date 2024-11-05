@@ -32,7 +32,7 @@
         <fieldset style="border: 2px solid rgb(0, 0, 0);
             padding: 10px; width: 1440px; margin-left: 175px; margin-top: 25px">
         <h2 align="center">Форма для регистрации</h2>
-        <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank"> <!--Форма для отправки данных на Удаленный Сервер (target= где открывается; _blank - открывается в новой вкладке)-->
         <p>Для поисковика:<input type="hidden"  name="q" value="search"></p>
         <p>Электронная почта: <br><input type="Text" name="e-mail" size=20  value="moya.pochta@mail.ru"></p>
         <p>Пароль от личного кабинета: <br><input type="password" name="password" size=20  value="12345"></p>
@@ -41,8 +41,8 @@
         <p>Телефон: <br><input type="Text" name="phone" size=20  value="8-888-888-88-88"></p>
         <p>Дата: <br><input type="date" name="data" value="2010-10-10"></p>
         <p>
-        <input type="Reset"  name="Reset"  value="Обновить">
-        <input type="Submit" name="submit"  value="Отправить">
+        <input type="Reset"  name="Reset"  value="Обновить"> <!--кнопка для сброса формы (тип Reset)-->
+        <input type="Submit" name="submit"  value="Отправить"> <!--кнопка для подтверждения отправки (тип Submit)-->
         </p>
         </form>
 
@@ -59,7 +59,7 @@
         <p>Группа: <br><input type="Text" name="group" size=20  value="grup111"></p>
         <p>Выберите план</p>
         <p>
-        <SELECT NAME="Plan">
+        <SELECT NAME="Plan"> <!--Выпадающий список-->
         <OPTION VALUE="baz">Базовый план
         <OPTION VALUE ="stand">Стандартный план
         <OPTION VALUE ="prem">Премиум план
@@ -69,12 +69,12 @@
         <p>Ваш отзыв:<br></p>
         <input type="Text" name="question" size=20  value="Write something">
         <p>Выберите тип отзыва:</p>
-        <p><input type="radio" id="positive" name="review_type" value="positive" checked>
+        <p><input type="radio" id="positive" name="review_type" value="positive" checked> <!--радио кнопка-->
         <label for="positive">Положительный</label><br>
-        <input type="radio" id="negative" name="review_type" value="negative">
+        <input type="radio" id="negative" name="review_type" value="negative"> <!--радио кнопка-->
         <label for="negative">Отрицательный</label></p>
         <p><label for="newsletter">Подписаться на рассылку:</label>
-        <input type="checkbox" id="newsletter" name="newsletter" value="yes"><p><br>
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes"><p><br> <!--галочка-->
         <p>
         <input type="Reset"  name="Reset"  value="Обновить">
         <input type="Submit" name="submit"  value="Отправить">
